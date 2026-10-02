@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NestCraft — Premium Real Estate</title>
+    <link rel="stylesheet" href="/style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <div id="app">
+
+      <!-- ===================== Navbar ===================== -->
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="#home" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <span>NestCraft</span>
+          </a>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#listings" class="nav-link">Listings</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#agents" class="nav-link">Agents</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ===================== Hero ===================== -->
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Find your dream home</p>
+          <h1 class="hero-title">Discover Properties<br>That Feel Like Home</h1>
+          <p class="hero-subtitle">Explore curated listings of luxury homes, modern apartments, and charming townhouses across the country.</p>
+          <div class="hero-search">
+            <div class="search-field">
+              <label>Location</label>
+              <input type="text" id="search-location" placeholder="City, State" />
+            </div>
+            <div class="search-field">
+              <label>Type</label>
+              <select id="search-type">
+                <option value="all">All Types</option>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label>Status</label>
+              <select id="search-status">
+                <option value="all">All</option>
+                <option value="For Sale">For Sale</option>
+                <option value="For Rent">For Rent</option>
+              </select>
+            </div>
+            <button class="search-btn" id="search-btn">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Stats ===================== -->
+      <section class="stats">
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number" data-target="250">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Properties Listed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="180">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="25">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Cities Covered</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Listings ===================== -->
+      <section class="listings" id="listings">
+        <div class="section-header">
+          <p class="section-eyebrow">Our Listings</p>
+          <h2 class="section-title">Featured Properties</h2>
+          <p class="section-desc">Browse our hand-picked selection of premium properties available for sale and rent.</p>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="house">Houses</button>
+          <button class="filter-btn" data-filter="apartment">Apartments</button>
+          <button class="filter-btn" data-filter="For Sale">For Sale</button>
+          <button class="filter-btn" data-filter="For Rent">For Rent</button>
+        </div>
+        <div class="property-grid" id="property-grid">
+
+          <!-- Property 1 -->
+          <article class="property-card" data-id="1" data-type="house" data-status="For Sale" data-location="beverly hills, ca" data-price="1250000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/7598368/pexels-photo-7598368.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="1">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$1,250,000</div>
+              <h3 class="property-title">Hillcrest Modern Villa</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Beverly Hills, CA</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 4 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 3 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 3,200 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="1">View Details</button>
+          </article>
+
+          <!-- Property 2 -->
+          <article class="property-card" data-id="2" data-type="house" data-status="For Sale" data-location="lake tahoe, nv" data-price="895000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$895,000</div>
+              <h3 class="property-title">Lakeside Luxury Cottage</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lake Tahoe, NV</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 3 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 2,400 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="2">View Details</button>
+          </article>
+
+          <!-- Property 3 -->
+          <article class="property-card" data-id="3" data-type="apartment" data-status="For Sale" data-location="new york, ny" data-price="650000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$650,000</div>
+              <h3 class="property-title">Skyline Penthouse Apartment</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> New York, NY</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 2 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 1,500 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="3">View Details</button>
+          </article>
+
+          <!-- Property 4 -->
+          <article class="property-card" data-id="4" data-type="house" data-status="For Rent" data-location="austin, tx" data-price="4200">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/7031604/pexels-photo-7031604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-rent">For Rent</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$4,200/mo</div>
+              <h3 class="property-title">Garden View Family Home</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Austin, TX</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 4 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 3 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 2,800 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="4">View Details</button>
+          </article>
+
+          <!-- Property 5 -->
+          <article class="property-card" data-id="5" data-type="house" data-status="For Sale" data-location="malibu, ca" data-price="2100000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/37692742/pexels-photo-37692742.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$2,100,000</div>
+              <h3 class="property-title">Mediterranean Villa Estate</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Malibu, CA</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 5 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 4 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 4,500 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="5">View Details</button>
+          </article>
+
+          <!-- Property 6 -->
+          <article class="property-card" data-id="6" data-type="apartment" data-status="For Rent" data-location="chicago, il" data-price="2800">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/8134821/pexels-photo-8134821.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-rent">For Rent</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="6">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$2,800/mo</div>
+              <h3 class="property-title">Downtown Loft Apartment</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Chicago, IL</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 1 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 1 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 950 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="6">View Details</button>
+          </article>
+
+          <!-- Property 7 -->
+          <article class="property-card" data-id="7" data-type="house" data-status="For Sale" data-location="denver, co" data-price="750000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="7">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$750,000</div>
+              <h3 class="property-title">Suburban Sunset Estate</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Denver, CO</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 4 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 3 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 3,100 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="7">View Details</button>
+          </article>
+
+          <!-- Property 8 -->
+          <article class="property-card" data-id="8" data-type="house" data-status="For Sale" data-location="portland, or" data-price="980000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/30580640/pexels-photo-30580640.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="8">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$980,000</div>
+              <h3 class="property-title">Twin Modern Residences</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Portland, OR</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 3 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 2,200 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="8">View Details</button>
+          </article>
+
+          <!-- Property 9 -->
+          <article class="property-card" data-id="9" data-type="house" data-status="For Rent" data-location="seattle, wa" data-price="3800">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/7031600/pexels-photo-7031600.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-rent">For Rent</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="9">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$3,800/mo</div>
+              <h3 class="property-title">Forest Edge Retreat</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seattle, WA</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 3 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 2,000 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="9">View Details</button>
+          </article>
+
+          <!-- Property 10 -->
+          <article class="property-card" data-id="10" data-type="house" data-status="For Sale" data-location="boston, ma" data-price="540000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/7587470/pexels-photo-7587470.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="10">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$540,000</div>
+              <h3 class="property-title">Classic Brick Townhouse</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Boston, MA</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 3 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 1,850 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="10">View Details</button>
+          </article>
+
+          <!-- Property 11 -->
+          <article class="property-card" data-id="11" data-type="apartment" data-status="For Sale" data-location="miami, fl" data-price="480000">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/17113690/pexels-photo-17113690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-sale">For Sale</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="11">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$480,000</div>
+              <h3 class="property-title">City View High-Rise</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Miami, FL</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 2 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 1,200 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="11">View Details</button>
+          </article>
+
+          <!-- Property 12 -->
+          <article class="property-card" data-id="12" data-type="apartment" data-status="For Rent" data-location="san diego, ca" data-price="3200">
+            <div class="property-image" style="background-image: url('https://images.pexels.com/photos/9170385/pexels-photo-9170385.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+              <span class="property-badge badge-rent">For Rent</span>
+              <button class="property-fav" aria-label="Save property" data-fav-id="12">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-info">
+              <div class="property-price">$3,200/mo</div>
+              <h3 class="property-title">Waterfront Modern Apartments</h3>
+              <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> San Diego, CA</p>
+              <div class="property-details">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M2 8h20M2 16h20M6 4v4M18 4v4M6 16v4M18 16v4"/></svg> 2 Beds</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a4 4 0 0 0-4-4H9z"/></svg> 2 Baths</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> 1,100 sqft</span>
+              </div>
+            </div>
+            <button class="property-view" data-view-id="12">View Details</button>
+          </article>
+
+        </div>
+        <p class="no-results" id="no-results" style="display:none;">No properties match your search. Try adjusting your filters.</p>
+      </section>
+
+      <!-- ===================== About ===================== -->
+      <section class="about" id="about">
+        <div class="about-container">
+          <div class="about-image">
+            <img src="https://images.pexels.com/photos/7031604/pexels-photo-7031604.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Modern home exterior" />
+            <div class="about-image-badge">
+              <span class="badge-number">15+</span>
+              <span class="badge-text">Years of<br>Excellence</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <p class="section-eyebrow">About NestCraft</p>
+            <h2 class="section-title left">Your Trusted Partner in Real Estate</h2>
+            <p class="about-text">At NestCraft, we believe finding the right home should be an exciting journey, not a stressful one. With over 15 years of experience in the real estate market, our dedicated team has helped hundreds of families find their perfect living space.</p>
+            <p class="about-text">From luxury estates to cozy apartments, we offer personalized service tailored to your unique needs and budget. Our deep market knowledge and commitment to transparency set us apart.</p>
+            <ul class="about-features">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Expert market analysis</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Personalized property matching</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Full-service transaction support</li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Transparent, no-pressure guidance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Agents ===================== -->
+      <section class="agents" id="agents">
+        <div class="section-header">
+          <p class="section-eyebrow">Meet the Team</p>
+          <h2 class="section-title">Our Expert Agents</h2>
+          <p class="section-desc">Experienced professionals dedicated to helping you find the perfect property.</p>
+        </div>
+        <div class="agent-grid">
+          <div class="agent-card">
+            <div class="agent-image" style="background-image: url('https://images.pexels.com/photos/7414901/pexels-photo-7414901.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')"></div>
+            <div class="agent-info">
+              <h3>Sarah Mitchell</h3>
+              <p class="agent-role">Senior Real Estate Agent</p>
+              <p class="agent-sales">120+ properties sold</p>
+              <div class="agent-contact">
+                <a href="tel:(310) 555-0142">(310) 555-0142</a>
+                <a href="mailto:sarah@nestcraft.com">sarah@nestcraft.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-image" style="background-image: url('https://images.pexels.com/photos/7578850/pexels-photo-7578850.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')"></div>
+            <div class="agent-info">
+              <h3>James Anderson</h3>
+              <p class="agent-role">Luxury Property Specialist</p>
+              <p class="agent-sales">95+ properties sold</p>
+              <div class="agent-contact">
+                <a href="tel:(212) 555-0188">(212) 555-0188</a>
+                <a href="mailto:james@nestcraft.com">james@nestcraft.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="agent-card">
+            <div class="agent-image" style="background-image: url('https://images.pexels.com/photos/7578989/pexels-photo-7578989.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')"></div>
+            <div class="agent-info">
+              <h3>Emily Roberts</h3>
+              <p class="agent-role">Residential Advisor</p>
+              <p class="agent-sales">78+ properties sold</p>
+              <div class="agent-contact">
+                <a href="tel:(512) 555-0167">(512) 555-0167</a>
+                <a href="mailto:emily@nestcraft.com">emily@nestcraft.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Contact ===================== -->
+      <section class="contact" id="contact">
+        <div class="contact-container">
+          <div class="contact-info">
+            <p class="section-eyebrow">Get in Touch</p>
+            <h2 class="section-title left">Let's Find Your Dream Home</h2>
+            <p class="contact-desc">Have questions about a property or want to schedule a viewing? Reach out and our team will get back to you within 24 hours.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div><span>Phone</span><br>(310) 555-0100</div>
+              </div>
+              <div class="contact-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div><span>Email</span><br>hello@nestcraft.com</div>
+              </div>
+              <div class="contact-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div><span>Office</span><br>90210 Wilshire Blvd, Beverly Hills, CA</div>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <input type="text" placeholder="Phone Number" />
+            <select required>
+              <option value="">I'm interested in...</option>
+              <option>Buying a property</option>
+              <option>Renting a property</option>
+              <option>Selling a property</option>
+              <option>General inquiry</option>
+            </select>
+            <textarea placeholder="Tell us what you're looking for..." rows="4" required></textarea>
+            <button type="submit" class="form-submit">Send Message</button>
+            <p class="form-success" id="form-success">Thank you! We'll be in touch within 24 hours.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===================== Footer ===================== -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <a href="#home" class="nav-logo footer-logo">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <span>NestCraft</span>
+            </a>
+            <p class="footer-desc">Premium real estate services helping you find the perfect place to call home.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#listings">Listings</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#agents">Agents</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Property Types</h4>
+            <ul>
+              <li><a href="#listings">Houses</a></li>
+              <li><a href="#listings">Apartments</a></li>
+              <li><a href="#listings">Luxury Homes</a></li>
+              <li><a href="#listings">Townhouses</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+              <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 NestCraft Real Estate. All rights reserved.</p>
+        </div>
+      </footer>
+
+    </div>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
